@@ -61,6 +61,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
     @Override
     public void receiveInfo(GameInfo info) {
         //TODO You will implement this method to receive state objects from the game
+        int x = 2;
     }//receiveInfo
 
     /**
