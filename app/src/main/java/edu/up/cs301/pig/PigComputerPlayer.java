@@ -35,19 +35,13 @@ public class PigComputerPlayer extends GameComputerPlayer {
         if (gameState.getPlayerTurn() != playerNum) {
             return;
         } else {
-            if (gameState.getRunningTotal() < 7) {
+            sleep(2000);
+            Random rand = new Random();
+            if (rand.nextInt(2) == 0) {
                 game.sendAction(new PigRollAction(this));
             } else {
-                Random rand = new Random();
-                if (rand.nextInt(3) == 0) {
-                    game.sendAction(new PigRollAction(this));
-                } else {
-                    game.sendAction(new PigHoldAction(this));
-                }
+                game.sendAction(new PigHoldAction(this));
             }
         }
-
-
     }//receiveInfo
-
 }
